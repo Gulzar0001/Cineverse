@@ -1,9 +1,12 @@
 import ipb from "../assets/ipb.jpg"
+import MovieCard from "../components/MovieCard"
+import { featuredMovies } from "../data/featuredmovies"
+import { trendingMovies } from "../data/featuredmovies"
 
 function Home() {
   return (
     
-    <div className="  relative w-full h-full  ">
+    <div className="  bg-black text-white min-h-screen w-full  ">
       <img
         src={ipb}
         alt="Interstellar Banner"
@@ -19,8 +22,31 @@ function Home() {
           <button className="bg-white px-6 py-2 rounded text-black">Watch Later</button>
         </div>
       </div>
-      {/* Optional dark overlay */}
-      <div className="absolute inset-0 bg-black/30 z-0" />
+      
+
+
+
+
+      {/* Featured Movies Section */}
+<div className="px-6 py-10 animate-fade-in-up">
+  <h2 className="text-3xl font-bold mb-6">Featured Movies</h2>
+  <div className="flex flex-wrap gap-6">
+    {featuredMovies.map((movie) => (
+      <MovieCard key={movie.id} movie={movie} />
+    ))}
+  </div>
+</div>
+
+
+      {/* Trending Movies Section */}
+<div className="px-6 py-10 animate-fade-in-up">
+  <h2 className="text-3xl font-bold mb-6">Trending </h2>
+  <div className="flex flex-wrap gap-6">
+    {trendingMovies.map((movie) => (
+      <MovieCard key={movie.id} movie={movie} />
+    ))}
+  </div>
+</div>
     </div>
   )
 }
