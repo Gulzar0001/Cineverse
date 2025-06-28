@@ -35,6 +35,17 @@ function Home() {
 </div>
 
 
+<div className="px-6 py-10 animate-fade-in-up">
+  <h2 className="text-3xl font-bold mb-6">Favourites </h2>
+  <div className="flex flex-wrap gap-6">
+    {trendingMovies.map((movie) => (
+      <MovieCard key={movie.id} movie={movie} />
+    ))}
+  </div>
+</div>
+
+
+
  
     </div>
   )
