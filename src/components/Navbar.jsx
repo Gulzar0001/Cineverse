@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logoimg from "../assets/logoimg.png";
 
 function Navbar() {
@@ -20,16 +21,16 @@ function Navbar() {
       </div>
 
       <div className='flex space-x-4 p-2 rounded-lg w-96 justify-between items-center'>
-        <p className="hover:text-white cursor-pointer transition">Home</p>
-        <p className="hover:text-white cursor-pointer transition">Movies</p>
-        <p className="hover:text-white cursor-pointer transition">TV Shows</p>
+        <Link to="/" className="hover:text-white cursor-pointer transition">Home</Link>
+        <Link to="/movies" className="hover:text-white cursor-pointer transition">Movies</Link>
+        <Link to="/tv" className="hover:text-white cursor-pointer transition">TV Shows</Link>
       </div>
 
       <div
         onMouseEnter={() => setShowSearch(true)}
         onMouseLeave={() => setShowSearch(false)}
         className={`flex items-center transition-all duration-300 px-4 py-2 rounded-full ${showSearch ? "bg-black/30 backdrop-blur-sm w-96" : "w-12 justify-center"}`}>
-        
+
         <span className="material-symbols-outlined text-slate-200 text-2xl font-semibold cursor-pointer hover:text-white transition">
           search
         </span>
