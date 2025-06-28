@@ -6,7 +6,7 @@ import HeroSlider from "../components/HeroSlider"
 function Home() {
   return (
 
-    <div className="  bg-black text-white min-h-screen w-full  ">
+    <div className=" text-white min-h-screen w-full  ">
       
       
 

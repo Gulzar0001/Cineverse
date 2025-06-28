@@ -5,7 +5,7 @@ import MainStack from './MainStack'
 const App = () => {
   return (
     <>
-    <div className="bg-slate-500">
+    <div className="bg-black text-white">
       <Navbar />
       <MainStack />
       <Footer />
