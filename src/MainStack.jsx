@@ -12,6 +12,7 @@ const MainStack = () => {
   <Route path="/movies" element={<Movies />} />
   <Route path="/tv" element={<TvShows />} />
   <Route path="/dashboard" element={<Dashboard />} />
+  <Route path="/movie/:id" element={<MovieDetail />} />
 </Routes>
   )
 }
